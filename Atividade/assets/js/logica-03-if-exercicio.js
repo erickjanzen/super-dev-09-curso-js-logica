@@ -360,3 +360,67 @@ function exercicio26(){
 
     
 }
+
+function exercicio27(){
+    let nm1 = parseInt(prompt("Digite o primeiro número"))
+    let nm2 = parseInt(prompt("Digite o segundo número"))
+
+    if ((nm1 < 0) && (nm2 < 0)) {
+        alert("Os dois números são negativos")
+    } else if ((nm1 < 0) && (nm2 > 0)){
+        alert("Um dos números são negativos")
+    } else if ((nm2 < 0) && (nm1 > 0)){
+        alert("Um dos números são negativos")
+    } else {
+        alert("Os dois números são positivos")
+    }
+}
+
+function exercicio28(){
+    let nota1 = parseFloat(prompt("Digite a primeira nota"))
+    let nota2 = parseFloat(prompt("Digite a segunda nota"))
+    let nota3 = parseFloat(prompt("Digite a terceira nota"))
+
+    let somaTotal = ((nota1 + nota2 + nota3) / 3)
+    
+
+    if (somaTotal < 7) {
+       alert("Reprovado " + "\nNota final: " + somaTotal.toFixed(2))
+    } else {
+        frequencia = parseInt(prompt("Digite a quantidade de faltas"))
+    }
+    
+    let freqFinal = (somaTotal - (frequencia * 0.1))
+
+    if (freqFinal < 7) {
+        alert("Reprovado" + "\nNota final: " + freqFinal.toFixed(2))
+    } else {
+        alert("Aprovado" + "\nNota final: " + freqFinal.toFixed(2))
+    }
+}
+
+function exercicio29(){
+    let numero = parseInt(prompt("Digite um número"))
+
+    if (((numero % 2) === 0) && (numero & 3) === 0){
+        alert("Seu número é divisível por 2 e por 3")
+    } else if ((numero % 2)=== 0) {
+        alert("Seu número é divisível por 2")
+    } else if ((numero % 3)=== 0) {
+        alert("Seu número é divisível por 3")
+    } else {
+        alert("Seu número não é divisível")
+    }
+}
+
+function exercicio30(){
+    let ano = parseInt(prompt("Digite um ano"))
+
+    if (((ano % 4 )===0) && ((ano % 100)!==0)) {
+        alert("Ano bissexto")
+    } else if ((ano % 400)===0){
+        alert("Ano bissexto")
+    } else {
+        alert("Ano não bissexto")
+    }
+}
