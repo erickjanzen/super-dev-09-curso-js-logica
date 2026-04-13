@@ -126,9 +126,9 @@ function exercicio11(){
 
 function exercicio12(){
     let usuario = prompt("Digite seu perfil")
-    let senha = prompt ("Digite sua senha")
+    let senha = prompt("Digite sua senha")
 
-    if ((usuario === "admin") && (senha === 1234)){
+    if ((usuario === "admin") && (senha === "1234")){
         alert("Login correto")
     } else {
         alert("Login incorreto")
@@ -188,11 +188,11 @@ function exercicio17(){
     let somaTotal = ((nota1 + nota2 + nota3) / 3)
 
     if (somaTotal < 5) {
-        alert("Reprovado")
+        alert("Reprovado " + "(" + somaTotal + ")")
     } else if (somaTotal < 7) {
-        alert ("Recuperação")
+        alert ("Recuperação " + "(" + somaTotal + ")")
     } else {
-        alert("Aprovado")
+        alert("Aprovado " + "(" + somaTotal + ")")
     }
 }
 
@@ -280,4 +280,83 @@ function exercicio21(){
     } else if ((nm3 = nm1) && (nm2 < nm3)){
         alert("A ordem numérica é: " + nm3 + " " + nm1 + " " + nm2)
     }
+}
+
+function exercicio22(){
+    let nm1 = parseFloat(prompt("Digite o primeiro número"))
+    let nm2 = parseFloat(prompt("Digite o segundo número"))
+    let nm3 = parseFloat(prompt("Digite o terceiro número"))
+
+    if ((nm1 > nm2) && ( nm1 > nm3)){
+        alert("O maior número é: " + nm1)
+    } else if ((nm2 > nm3) && (nm2 > nm1)){
+        alert("O maior número é: " + nm2)
+    } else if ((nm3 > nm2) && (nm3 > nm1)){
+        alert("O maior número é: " + nm3)
+    }
+}
+
+function exercicio23(){
+    let nm1 = parseFloat(prompt("Digite o primeiro número"))
+    let nm2 = parseFloat(prompt("Digite o segundo número"))
+    let nm3 = parseFloat(prompt("Digite o terceiro número"))
+
+    if ((nm1 < nm2) && (nm1 < nm3)){
+        alert("O menor número é: " + nm1)
+    } else if ((nm2 < nm1) && (nm2 < nm3)){
+        alert("O menor número é: " + nm2)
+    } else {
+        alert("O menor número é: " + nm3)
+    }
+}
+
+function exercicio24(){
+    let nm1 = parseFloat(prompt("Digite o primeiro número"))
+    let nm2 = parseFloat(prompt("Digite o segundo número"))
+    let nm3 = parseFloat(prompt("Digite o terceiro número"))
+
+    if((nm1 < nm2) && (nm1 < nm3) && (nm2 < nm3)){
+        alert("Os números estão em ordem crescente")
+    }else if((nm3 < nm2) && (nm2 < nm1) && (nm3 < nm1)){
+        alert("Os números estão em ordem decrescente")
+    } else {
+        alert("Os números não possuem uma ordem")
+    }
+}
+
+function exercicio25(){
+    let idade = parseInt(prompt("Digite sua idade"))
+
+    if (idade < 12) { 
+        alert("Criança")
+    } else if (idade < 18) { 
+        alert("Adolescente")
+    } else if (idade < 40) {
+        alert("Adulto")
+    } else if (idade < 60) {
+        alert("Meia idade")
+    } else {
+        alert("Idoso")
+    }
+}
+
+function exercicio26(){
+    let valor = parseFloat(prompt("Valor do pagamento"))
+    let formaPagamento = prompt("Método de pagamento:" + "\nCartão de Débito: -5%" + "\nPIX: -10%" + "\nCartão de Crédito: Até 8 vezes sem juros")
+
+    if (formaPagamento === "PIX"){
+        alert("Valor do pagamento: R$ " + valor * 0.9)
+    } else if (formaPagamento === "cartão de débito") {
+        alert("Valor do pagamento: R$ " + valor * 0.95)
+    } else if (formaPagamento === "cartão de crédito"){
+        parcelas = parseInt(prompt("Parcelas:"))
+    }
+
+    if (parcelas <= 8){
+        alert("Valor do pagamento: R$ " + (valor / parcelas).toFixed(2) + " x" + parcelas)
+    } else if (parcelas > 8){
+        alert("Valor do pagamento: R$ " + (valor / parcelas).toFixed(2) / 0.85 + " x" + parcelas)
+    }
+
+    
 }
