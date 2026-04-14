@@ -279,6 +279,8 @@ function exercicio21(){
 
     } else if ((nm3 = nm1) && (nm2 < nm3)){
         alert("A ordem numérica é: " + nm3 + " " + nm1 + " " + nm2)
+    } else {
+        alert("A ordem numérica é: " + nm1 + " " + nm2 + " " + nm3)
     }
 }
 
