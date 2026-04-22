@@ -92,3 +92,58 @@ function exercicio12(){
         console.log("1 + " + indice + " = "+ (indice + 1))
     }
 }
+
+function exercicio13(){
+    let nome1
+    let nome2
+    let nome3
+    let nome4
+    for(let indice = 0; indice < 1; indice = indice + 1){
+        nome1 = prompt("Digite um nome")
+        nome2 = prompt("Digite um nome")
+        nome3 = prompt("Digite um nome")
+        nome4 = prompt("Digite um nome")
+    } if ((nome1.length > 1) && (nome2.length > 1) && (nome3.length > 1) && (nome4.length > 1)){
+        alert("Primeiro nome possui " + nome1.length + " letras" + "\nSegundo nome possui " + nome2.length + " letras" + "\nTerceiro nome possui " + nome3.length + " letras" + "\nQuarto nome possui " + nome4.length + " letras")
+    }
+
+}
+
+function exercicio14(){
+    let numeroM = 0
+    let numero = 0
+    for(let indice = 0; indice < 5; indice = indice + 1){
+        numero = parseFloat(prompt("Digite um número"))
+        if(numero > numeroM){
+            numeroM = numero
+        }
+    }
+    alert("O maior número é " + numeroM)
+}
+
+function exercicio15(){
+    let numeroM = 9999999999
+    let numero = 9999999999
+    for(let indice = 0; indice < 5; indice = indice + 1){
+        numero = parseFloat(prompt("Digite um número"))
+        if(numero < numeroM){
+            numeroM = numero
+        }
+    }
+    alert("O menor número é " + numeroM)
+}
+
+function exercicio16(){
+    let numeroP = 0
+    for(let indice = 0; indice < 6; indice = indice + 1){
+        let numero = parseFloat(prompt("Digite um número"))
+        if(numero > 0){
+            numeroP = numeroP + 1
+        }
+    }
+    alert(numeroP + " são positivos")
+}
+
+function exercicio17(){
+    
+}
