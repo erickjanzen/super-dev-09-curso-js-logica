@@ -145,5 +145,52 @@ function exercicio16(){
 }
 
 function exercicio17(){
-    
+    let numeroP = 0
+    for(let indice = 0; indice < 5; indice = indice + 1){
+        let numero = parseFloat(prompt("Digite um número"))
+        if(numero % 2 === 0){
+            numeroP = numero + numeroP
+        }
+    }
+    alert ("A soma dos números pares é " + numeroP)
+}
+
+function exercicio18(){
+    let quantidade = parseInt(prompt("Digite o último número"))
+    for(let indice = 0; indice < quantidade; indice = indice + 1){
+        if(indice % 3 === 0){
+            console.log(indice)
+        }
+    }
+}
+
+function exercicio19(){
+    for(let indice = 0; indice < 3; indice = indice + 1){
+        let produtos = prompt("Digite o nome do produto")
+        if(produtos.length < 2){
+            produto = prompt("Nome inválido, digite o nome de um produto válido")
+        }
+    }
+    alert("Produtos cadastrados com sucesso")
+}
+
+function exercicio20(){
+    let soma = 0
+    let indice
+    for(indice = 0; indice < 3; indice = indice + 1){
+        let nome = prompt("Digite o nome do usuário")
+        let idade = parseInt(prompt("Digite a idade do usuário"))
+        soma = idade + soma
+    }
+    alert("Foram registrados " + indice + " usuários \nSoma das idades é " + soma + "\nA média de idade é " + (soma / indice).toFixed(2))
+}
+
+function exercicio21(){
+    let inicial = parseInt(prompt("Digite o número inicial"))
+    let final = parseInt(prompt("Digite o número final"))
+    for(let indice = inicial; indice <= final; indice = indice + 1){
+        if(indice % 2 === 0){
+            console.log(indice)
+        }
+    }
 }
