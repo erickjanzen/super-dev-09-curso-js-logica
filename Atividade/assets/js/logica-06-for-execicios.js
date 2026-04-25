@@ -345,10 +345,9 @@ function exercicio33(){
 
 function exercicio34(){
     let numero = parseInt(prompt("Digite um número para fatorar"))
-    let numB = 0
-    for(let indice = 1; indice < numero; indice = indice + 1){
-        let numA = numero - 1
-        numB = numA * (numA - 1)
+    let numB = 1
+    for(let indice = 1; indice <= numero; indice = indice + 1){
+        numB = numB * indice
     }
     console.log(numB)
 }
@@ -357,8 +356,7 @@ function exercicio35(){
     let inicio = parseInt(prompt("Digite o número que a contagem regressiva começa"))
     let final = parseInt(prompt("Digite o número que a contagem regressiva termina"))
     for(let indice = inicio; indice >= final; indice = indice - 1){
-        alert(indice)
-}
+        alert(indice)}
 }
 
 function exercicio36(){
@@ -428,28 +426,43 @@ function exercicio39(){
 }
 
 function exercicio40(){
-    let passado = 0
-    let mediaM = 0
-    let mediaR = 999999
-    let melhorN = ""
-    let cadastro = 0
-    for (let indice = 0; indice < 5; indice = indice + 1){
+    let indice = 0
+    let aprovados = 0
+    let melhorM = 0
+    let piorM = 9999
+    let aluno = ""
+    debugger
+    for(indice = 0; indice < 5; indice = indice + 1){
         let nome = prompt("Digite o nome do aluno")
-        let nota1 = parseInt(prompt("Digite a primeira nota do aluno"))
-        let nota2 = parseInt(prompt("Digite a segunda nota do aluno"))
-        let media = (nota1 + nota2) / 2
-        if(media > 7){
-            passado = passado + 1
+        let nota = parseFloat(prompt("Digite a primeira nota do aluno"))
+        let nota2 = parseFloat(prompt("Digite a segunda nota do aluno"))
+        let media = (nota + nota2) / 2
+
+        if(media >= 7){
+            aprovados = aprovados + 1
         }
-        if(media > mediaM){
-            mediaM = media
-        } else if(media > mediaR){
-            mediaR = media
+        if(media > melhorM){
+            melhorM = media
+            aluno = nome
         }
-        if(media > mediaM){
-            melhorN = nome
+        if(media < piorM){
+            piorM = media
         }
-        cadastro = cadastro + 1
     }
-    console.log("Alunos cadastrados: " + indice + "\nAlunos aprovados: " + passado + "\nAlunos reprovados: " + (5 - passado) + "\nMaior média da turma: " + mediaM + "\nMenor média da turma: " + mediaR + "\nMelhor aluno: " + melhorN)
+    console.log("Alunos registrados: " + indice + "\nAprovados: " + aprovados + "\nReprovados: " + (5 - aprovados) + "\nMelhor média: " + melhorM + "\nPior média: " + piorM + "\nMelhor aluno: " + aluno)
+}
+
+
+function exercicio41(){
+    let inicial = parseInt(prompt("Digite o número inicial"))
+    let final = parseInt(prompt("Digite o número final"))
+
+    for(inicial = inicial; inicial <= final; inicial = inicial + 1){
+
+        for(let tabuada = 0; tabuada <= 10; tabuada = tabuada + 1){
+
+            console.log(inicial + " * " + (inicial + 1 ) + " = " + (inicial + 1 ) * inicial)
+        }
+    console.log("\n")
+    }
 }
