@@ -452,17 +452,23 @@ function exercicio40(){
     console.log("Alunos registrados: " + indice + "\nAprovados: " + aprovados + "\nReprovados: " + (5 - aprovados) + "\nMelhor média: " + melhorM + "\nPior média: " + piorM + "\nMelhor aluno: " + aluno)
 }
 
-
 function exercicio41(){
-    let inicial = parseInt(prompt("Digite o número inicial"))
-    let final = parseInt(prompt("Digite o número final"))
-
-    for(inicial = inicial; inicial <= final; inicial = inicial + 1){
-
-        for(let tabuada = 0; tabuada <= 10; tabuada = tabuada + 1){
-
-            console.log(inicial + " * " + (inicial + 1 ) + " = " + (inicial + 1 ) * inicial)
+    let inicial = parseInt(prompt("Digite o número inicial da multiplicação"))
+    let final = parseInt(prompt("Digite o número final da multiplicação"))
+    for(let indice = inicial; inicial <= final; inicial = inicial + 1){
+        console.log("Tabuada do " + inicial)
+        for(let tabuada = 1; tabuada <=10; tabuada = tabuada + 1){
+            console.log(inicial + " * " + tabuada + " = " + tabuada * inicial)
         }
-    console.log("\n")
+        console.log("\n")
+    }
+}
+
+function exercicio42(){
+    let numero = parseInt(prompt("Digite um número para ver os divisores"))
+    for(let indice = 1; indice <= numero; indice = indice + 1){
+        if(numero % indice === 0){
+            console.log(indice)
+        }
     }
 }
