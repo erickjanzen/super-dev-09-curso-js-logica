@@ -513,8 +513,11 @@ function exercicio43(){
 
 function exercicio44(){
     let numero = parseInt(prompt("Digite um número"))
+    let numB = 1
+    let soma = 0
     for(let indice = 1; indice <= numero; indice = indice + 1){
-        let soma = numero + indice
-        console.log(indice + " + " + numero + " = " + soma)
+        numB = numB * indice
+        soma = numB + soma
+        console.log(numero + " + " + numB + " = " + soma)
     }
 }
