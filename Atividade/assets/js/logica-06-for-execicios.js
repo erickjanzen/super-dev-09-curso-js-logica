@@ -472,3 +472,49 @@ function exercicio42(){
         }
     }
 }
+
+function exercicio443(){
+    let numero = parseInt(prompt("Digite um número para ver se é primo"))
+    if(numero <= 1){
+        console.log(numero + " não é primo")
+        return
+    }
+
+    let ehPrimo = true
+
+    for(let indice = 2; indice < numero; indice = indice + 1){
+        if(numero % indice === 0){
+            ehPrimo = false
+            break
+        }
+    }
+    if(ehPrimo = true){
+        console.log(numero + " é primo")
+    } else{
+        console.log(numero + " não é primo")
+    }
+}
+
+function exercicio43(){
+    let numero = parseInt(prompt("Digite o número para ver se é primo ou não"))
+    let naoPrimo = 0
+    if(numero === 2){
+        console.log(numero + " é primo")
+        return
+    }
+    for(let indice = 2; indice < numero; indice = indice + 1){
+        if(numero % indice === 0){
+            console.log(numero + " não é primo")
+            return
+        }
+    }
+    console.log(numero + " é primo")
+}
+
+function exercicio44(){
+    let numero = parseInt(prompt("Digite um número"))
+    for(let indice = 1; indice <= numero; indice = indice + 1){
+        let soma = numero + indice
+        console.log(indice + " + " + numero + " = " + soma)
+    }
+}
