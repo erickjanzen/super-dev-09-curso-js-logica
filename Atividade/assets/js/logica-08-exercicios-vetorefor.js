@@ -93,3 +93,55 @@ function exercicio07(){
     }
     alert("Temperatura mais alta: " + tempMaisAlta)
 }
+
+function exercicio08(){
+    let precos = []
+
+    for(let i = 0; i < 4; i++){
+        precos.push(parseFloat(prompt("Digite o preço do produto")))
+    }
+    let precoMenor = 99999
+    for(let i = 0; i < precos.length; i++){
+        if(precos[i] < precoMenor){
+            precoMenor = precos[i]
+        }
+    }
+    alert("O menor preço é: " + precoMenor)
+}
+
+function exercicio09(){
+    let numeros = []
+
+    for(let i = 0; i < 6; i++){
+        numeros.push(parseFloat(prompt("Digite um número")))
+    }
+    let pares = 0
+    for(let i = 0; i < numeros.length; i++){
+        if(numeros[i] % 2 === 0){
+            pares = pares + 1
+        }
+    }
+
+    alert("Quantidade de números pares: " + pares)
+}
+
+function exercicio10(){
+    let alunos = []
+
+    for(let i = 0; i < 5; i++){
+        alunos.push(prompt("Digite o nome do aluno"))
+    }
+    let pesquisa = prompt("Digite um nome para pesquisar na lista de nomes")
+    let nome = ""
+    debugger
+    for(let i = 0; i < alunos.length; i++){
+        if(alunos[i] === pesquisa){
+            nome = ""
+            break
+        } else {
+            nome = " não"
+        }
+    }
+
+    alert("O nome " + pesquisa + nome + " foi encontrado na lista de pesquisa")
+}
