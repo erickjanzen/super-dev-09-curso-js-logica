@@ -166,3 +166,126 @@ function exemploMenu(){
         }
         alert("Obrigado por utilizar nosso sistema")
 }
+
+function exercicio11(){
+    let numeros = []
+
+    for(let i = 0; i < 6; i++){
+        numeros.push(parseInt(prompt("Digite um número")))
+    }
+    for(let i = 0; i < numeros.length; i++){
+        alert(numeros[i])
+    }
+    for(let i = 0; i < numeros.length; i++){
+        if(numeros[i] >= 10){
+            alert(numeros[i])
+        }
+    }
+}
+
+function exercicio12(){
+    let nomes = []
+
+    for(let i = 0; i < 5; i++){
+        nomes.push(prompt("Digite um nome"))
+    }
+    let nomesComCinco = 0
+    for(let i = 0; i < nomes.length; i++){
+        let contarNome = nomes[i]
+        if(contarNome.length > 5){
+            nomesComCinco = nomesComCinco + 1
+        }
+    }
+
+    alert("Nomes com mais de 5 letras: " + nomesComCinco)
+}
+
+function exercicio13(){
+    let idade = []
+
+    for(let i = 0; i < 7; i++){
+        idade.push(parseInt(prompt("Digite uma idade")))
+    }
+    let menorIdade = 0
+    for(let i = 0; i < idade.length; i++){
+        if(idade < 18){
+            menorIdade = menorIdade + 1
+        }
+    }
+    alert("Menores de idade: " + menorIdade + 
+        "\nMaiores de idade: " + (7 - menorIdade)
+    )
+}
+
+function exercicio14(){
+    let notas = []
+
+    for(let i = 0; i < 6; i++){
+        notas.push(parseFloat(prompt("Digite a nota")))
+    }
+    for(let i = 0; i < notas.length; i++){
+        alert("Nota registrada: " + notas[i])
+    }
+    let notaMaior = []
+    for(let i = 0; i < notas.length; i++){
+        if(notas[i] >= 7){
+            notaMaior = notas[i] + ", " + notaMaior
+        }
+    }
+    alert("Notas maiores ou iguais a 7: " + notaMaior)
+}
+
+function exercicio15(){
+    let cidades = [];
+
+    for(let i = 0; i < 4; i++){
+       cidades.push(prompt("Digite uma cidade")) 
+    }
+    cidades[3] = prompt("Digite uma nova cidade")
+    let cidade = []
+    for(let i = 0; i < cidades.length; i++){
+        cidade = cidades[i] + cidade
+    }
+    alert(cidades)
+}
+
+function exercicio16(){
+    let produtos = []
+
+    for(let i = 0; i < 5; i++){
+        produtos.push(prompt("Digite um produto"))
+    }
+    let pesquisar = prompt("Pesquise um produto")
+    let validacao = ""
+    for(let i = 0; i < produtos.length; i++){
+        if(pesquisar === produtos[i]){
+            validacao = "O produto foi encontrado na " + [i] + " posição"
+            break
+        } else { 
+            validacao = "Produto não encontrado"
+        }
+    }
+    alert(validacao)
+}
+
+function exercicio17(){
+    let numeros = []
+
+    for(let i = 0; i < 8; i++){
+        numeros.push(parseFloat(prompt("Digite um número")))
+    }
+    let somaPar = 0
+    let somaImpar = 0
+    for(let i = 0; i < numeros.length; i++){
+        if(numeros[i] % 2 === 0){
+            let numero = numeros[i]
+            somaPar = somaPar + numero
+        } else { 
+            let numero = numeros[i]
+            somaImpar = somaImpar + numero
+        }
+    }
+    alert("Soma dos números pares: " + somaPar + 
+        "\nSoma dos números impares: " + somaImpar
+    )
+}
